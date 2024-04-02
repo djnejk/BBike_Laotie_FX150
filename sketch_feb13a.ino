@@ -42,6 +42,10 @@ void setup() {
 
   pinMode(buzzer, OUTPUT);
   Serial.begin(9600);
+
+  zapinaci_animace();
+
+
 }
 
 void loop() {
@@ -105,7 +109,7 @@ void loop() {
           leds_2[45 + 22] = RGBsvetla_zadni;
           leds_2[45 + 21 - i] = RGBsvetla_zadni;
           leds_2[45 + 23 + i] = RGBsvetla_zadni;
-                          fill_solid(leds_3, 90, RGBsvetla_zadni);
+          fill_solid(leds_3, 90, RGBsvetla_zadni);
         }
         FastLED.show();
         delay(20);
@@ -221,3 +225,124 @@ void loop() {
     FastLED.show();
   }
 }
+
+
+
+
+
+void zapinaci_animace() {
+  //uvod blinkry:
+  for (int i = 0; i <= 21; i++) {
+    leds_1[22] = RGBsvetla_blinkr;
+    leds_1[21 - i] = RGBsvetla_blinkr;
+    leds_1[23 + i] = RGBsvetla_blinkr;
+    leds_2[22] = RGBsvetla_blinkr;
+    leds_2[21 - i] = RGBsvetla_blinkr;
+    leds_2[23 + i] = RGBsvetla_blinkr;
+
+    leds_1[45 + 22] = RGBsvetla_blinkr;
+    leds_1[45 + 21 - i] = RGBsvetla_blinkr;
+    leds_1[45 + 23 + i] = RGBsvetla_blinkr;
+    leds_2[45 + 22] = RGBsvetla_blinkr;
+    leds_2[45 + 21 - i] = RGBsvetla_blinkr;
+    leds_2[45 + 23 + i] = RGBsvetla_blinkr;
+    FastLED.show();
+    delay(5);
+  }
+  delay(20);
+  for (int i = 0; i <= 21; i++) {
+    leds_1[22] = CRGB(0, 0, 0);
+    leds_1[21 - i] = CRGB(0, 0, 0);
+    leds_1[23 + i] = CRGB(0, 0, 0);
+    leds_1[45 + 22] = CRGB(0, 0, 0);
+    leds_1[45 + 21 - i] = CRGB(0, 0, 0);
+    leds_1[45 + 23 + i] = CRGB(0, 0, 0);
+    leds_2[22] = CRGB(0, 0, 0);
+    leds_2[21 - i] = CRGB(0, 0, 0);
+    leds_2[23 + i] = CRGB(0, 0, 0);
+    leds_2[45 + 22] = CRGB(0, 0, 0);
+    leds_2[45 + 21 - i] = CRGB(0, 0, 0);
+    leds_2[45 + 23 + i] = CRGB(0, 0, 0);
+    FastLED.show();
+    delay(5);
+  }
+  delay(50);
+  for (int i = 0; i <= 21; i++) {
+    leds_1[22] = RGBsvetla_blinkr;
+    leds_1[21 - i] = RGBsvetla_blinkr;
+    leds_1[23 + i] = RGBsvetla_blinkr;
+    leds_2[22] = RGBsvetla_blinkr;
+    leds_2[21 - i] = RGBsvetla_blinkr;
+    leds_2[23 + i] = RGBsvetla_blinkr;
+
+    leds_1[45 + 22] = RGBsvetla_blinkr;
+    leds_1[45 + 21 - i] = RGBsvetla_blinkr;
+    leds_1[45 + 23 + i] = RGBsvetla_blinkr;
+    leds_2[45 + 22] = RGBsvetla_blinkr;
+    leds_2[45 + 21 - i] = RGBsvetla_blinkr;
+    leds_2[45 + 23 + i] = RGBsvetla_blinkr;
+    FastLED.show();
+    delay(5);
+  }
+  delay(20);
+  for (int i = 0; i <= 21; i++) {
+    leds_1[22] = CRGB(0, 0, 0);
+    leds_1[21 - i] = CRGB(0, 0, 0);
+    leds_1[23 + i] = CRGB(0, 0, 0);
+    leds_1[45 + 22] = CRGB(0, 0, 0);
+    leds_1[45 + 21 - i] = CRGB(0, 0, 0);
+    leds_1[45 + 23 + i] = CRGB(0, 0, 0);
+    leds_2[22] = CRGB(0, 0, 0);
+    leds_2[21 - i] = CRGB(0, 0, 0);
+    leds_2[23 + i] = CRGB(0, 0, 0);
+    leds_2[45 + 22] = CRGB(0, 0, 0);
+    leds_2[45 + 21 - i] = CRGB(0, 0, 0);
+    leds_2[45 + 23 + i] = CRGB(0, 0, 0);
+    FastLED.show();
+    delay(5);
+  }
+  for (int i = 0; i <= 21; i++) {
+    leds_1[22] = RGBsvetla_predni;
+    leds_1[21 - i] = RGBsvetla_predni;
+    leds_1[23 + i] = RGBsvetla_predni;
+    leds_2[22] = RGBsvetla_zadni;
+    leds_2[21 - i] = RGBsvetla_zadni;
+    leds_2[23 + i] = RGBsvetla_zadni;
+
+    leds_1[45 + 22] = RGBsvetla_predni;
+    leds_1[45 + 21 - i] = RGBsvetla_predni;
+    leds_1[45 + 23 + i] = RGBsvetla_predni;
+    leds_2[45 + 22] = RGBsvetla_zadni;
+    leds_2[45 + 21 - i] = RGBsvetla_zadni;
+    leds_2[45 + 23 + i] = RGBsvetla_zadni;
+    fill_solid(leds_3, 90, RGBsvetla_zadni);
+    FastLED.show();
+
+    delay(30);
+  }
+    for (int i = 21; i >= 0; i--) {
+    // leds_1[22] = CRGB(0, 0, 0);
+    leds_1[21 - i] = CRGB(0, 0, 0);
+    leds_1[23 + i] = CRGB(0, 0, 0);
+    leds_2[21 - i] = CRGB(0, 0, 0);
+    leds_2[23 + i] = CRGB(0, 0, 0);
+
+    // leds_1[45 + 22] = CRGB(0, 0, 0);
+    leds_1[45 + 21 - i] = CRGB(0, 0, 0);
+    leds_1[45 + 23 + i] = CRGB(0, 0, 0);
+    // leds_2[45 + 22] = CRGB(0, 0, 0);
+    leds_2[45 + 21 - i] = CRGB(0, 0, 0);
+    leds_2[45 + 23 + i] = CRGB(0, 0, 0);
+    fill_solid(leds_3, 90, CRGB(0, 0, 0));
+    FastLED.show();
+
+    delay(30);
+  }
+}
+
+
+
+
+
+
+
