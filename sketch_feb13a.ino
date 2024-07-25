@@ -10,7 +10,7 @@
 
 //kufr
 #define LED_PIN_3 11
-#define NUM_LEDS_3 90
+#define NUM_LEDS_3 70
 
 //přední blatník + info HUD
 #define LED_PIN_4 9
@@ -38,7 +38,7 @@ const float br2 = 1;
 
 const CRGB RGBsvetla_zadni(255 * br, 0 * br, 0 * br);
 const CRGB RGBsvetla_predni(255 * br, 255 * br, 255 * br);
-const CRGB RGBsvetla_blinkr(255 * br, 100 * br, 0 * br);
+const CRGB RGBsvetla_blinkr(255 * 1, 100 * 1, 0 * 1);
 
 void setup() {
   FastLED.addLeds<WS2812, LED_PIN_1, GRB>(leds_1, NUM_LEDS_1);
